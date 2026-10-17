@@ -1,0 +1,126 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+.taskflow {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.taskflow header {
+  margin-bottom: 32px;
+}
+
+.taskflow h1 {
+  font-size: 36px;
+  margin: 0 0 8px;
+  color: #4338ca;
+}
+
+.taskflow header p {
+  color: #64748b;
+}
+
+.taskflow h2 {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.task-form,
+.taskflow section:not(:first-child) {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+.task-form form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.taskflow input,
+.taskflow select,
+.taskflow button {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+  font: inherit;
+}
+
+.taskflow input:focus,
+.taskflow select:focus {
+  outline: 2px solid #a5b4fc;
+  border-color: #6366f1;
+}
+
+.taskflow button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.taskflow button:hover {
+  background: #4338ca;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px 100px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item p {
+  margin-bottom: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.taskflow .error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+@media (max-width: 650px) {
+  .taskflow {
+    padding: 24px 14px;
+  }
+
+  .task-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .task-item {
+    grid-template-columns: 1fr;
+  }
+}
